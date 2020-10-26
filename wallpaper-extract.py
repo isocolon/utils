@@ -1,5 +1,4 @@
 from os import environ
-from glob import glob
 from shutil import copyfile
 from pathlib import Path
 from imghdr import what as GetExtension
@@ -42,7 +41,7 @@ def GetDimensions(filename):
 # (3) Copy file to target directory
 #
 try:
-    files = glob(f'{srcdir}\*')
+    files = Path(srcdir).rglob('*') # Path().rglob("*.py")
     for file in files:
         dimensions = GetDimensions(file)
         if not IsWallpaper(dimensions):
