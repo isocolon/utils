@@ -1,3 +1,15 @@
+@echo off
+
+setlocal EnableDelayedExpansion
+
+net session >nul 2>&1
+if %errorLevel% == 0 (
+    echo [+] Checking for ADMIN privileges ... OK!
+) else (
+    echo [-] You must run this script as admin!
+    exit 1
+)
+
 ::
 :: Remove 'Cast to Device...' from context menu
 ::
