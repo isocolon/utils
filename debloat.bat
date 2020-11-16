@@ -53,3 +53,9 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\MicrosoftEdge\TabPreloader" /v AllowTa
 ::
 sc stop "WSearch"
 sc config "WSearch" start= disabled
+
+
+::
+:: Disable SearchApp.exe
+::
+taskkill /f /im "SearchApp.exe" && mv "C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy" "C:\Windows\SystemApps\DISABLED_Microsoft.Windows.Search_cw5n1h2txyewy"
