@@ -59,3 +59,10 @@ sc config "WSearch" start= disabled
 :: Disable SearchApp.exe
 ::
 taskkill /f /im "SearchApp.exe" && mv "C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy" "C:\Windows\SystemApps\DISABLED_Microsoft.Windows.Search_cw5n1h2txyewy"
+
+
+::
+:: Remove Cortana activation task
+::
+Get-ScheduledTask | where { $_.TaskPath -like "*Agent Activation Runtime*" } | Unregister-ScheduledTask -Confirm:$false
+Remove-Item -Path "C:\Windows\System32\Tasks\Agent Activation Runtime"
