@@ -66,3 +66,12 @@ taskkill /f /im "SearchApp.exe" && mv "C:\Windows\SystemApps\Microsoft.Windows.S
 ::
 Get-ScheduledTask | where { $_.TaskPath -like "*Agent Activation Runtime*" } | Unregister-ScheduledTask -Confirm:$false
 Remove-Item -Path "C:\Windows\System32\Tasks\Agent Activation Runtime"
+
+
+::
+:: Remove 'Open file location' from context menu
+::
+reg delete "HKCR\lnkfile\shellex\ContextMenuHandlers\OpenContainingFolderMenu" /f
+reg delete "HKCR\LibraryLocation\ShellEx\ContextMenuHandlers\OpenContainingFolderMenu" /f
+reg delete "HKCR\Results\ShellEx\ContextMenuHandlers\OpenContainingFolderMenu" /f
+reg delete "HKCR\.symlink\shellex\ContextMenuHandlers\OpenContainingFolderMenu" /f
