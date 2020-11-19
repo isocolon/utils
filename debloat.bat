@@ -75,3 +75,9 @@ reg delete "HKCR\lnkfile\shellex\ContextMenuHandlers\OpenContainingFolderMenu" /
 reg delete "HKCR\LibraryLocation\ShellEx\ContextMenuHandlers\OpenContainingFolderMenu" /f
 reg delete "HKCR\Results\ShellEx\ContextMenuHandlers\OpenContainingFolderMenu" /f
 reg delete "HKCR\.symlink\shellex\ContextMenuHandlers\OpenContainingFolderMenu" /f
+
+
+::
+:: Remove 'Pin to Quick Access'
+::
+reg delete "HKCR\Folder\shell\pintohome" /f
