@@ -81,3 +81,10 @@ reg delete "HKCR\.symlink\shellex\ContextMenuHandlers\OpenContainingFolderMenu" 
 :: Remove 'Pin to Quick Access'
 ::
 reg delete "HKCR\Folder\shell\pintohome" /f
+
+
+::
+:: Remove 'Troublshoot compatibility'
+::
+:: NOTE: Requires restarting Explorer
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked" /v "{1d27f844-3a1f-4410-85ac-14651078412d}" /t REG_SZ /f
