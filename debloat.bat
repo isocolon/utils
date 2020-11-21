@@ -88,3 +88,9 @@ reg delete "HKCR\Folder\shell\pintohome" /f
 ::
 :: NOTE: Requires restarting Explorer
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked" /v "{1d27f844-3a1f-4410-85ac-14651078412d}" /t REG_SZ /f
+
+
+::
+:: Remove 'Unpin from Taskbar' and 'Pin to Taskbar'
+::
+reg delete "HKCR\*\shellex\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}" /f
