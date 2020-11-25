@@ -132,3 +132,10 @@ reg delete "HKLM\SOFTWARE\Classes\SystemFileAssociations\.png\Shell\3D Edit" /f
 reg delete "HKLM\SOFTWARE\Classes\SystemFileAssociations\.stl\Shell\3D Edit" /f
 reg delete "HKLM\SOFTWARE\Classes\SystemFileAssociations\.tif\Shell\3D Edit" /f
 reg delete "HKLM\SOFTWARE\Classes\SystemFileAssociations\.tiff\Shell\3D Edit" /f
+
+
+::
+::
+:: Remove 'Share' from context menu
+::
+reg delete "HKCR\*\shellex\ContextMenuHandlers\ModernSharing" /f
