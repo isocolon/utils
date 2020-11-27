@@ -151,3 +151,12 @@ reg delete "HKLM\SOFTWARE\Classes\Directory\shellex\PropertySheetHandlers\Sharin
 reg delete "HKLM\SOFTWARE\Classes\Drive\shellex\ContextMenuHandlers\Sharing" /f
 reg delete "HKLM\SOFTWARE\Classes\Drive\shellex\PropertySheetHandlers\Sharing" /f
 reg delete "HKLM\SOFTWARE\Classes\*\shellex\ContextMenuHandlers\Sharing" /f
+
+
+::
+:: Remove 'Pin to Start' from context menu
+::
+reg delete "HKCR\Folder\shellex\ContextMenuHandlers\PintoStartScreen" /f
+reg delete "HKCR\exefile\shellex\ContextMenuHandlers\PintoStartScreen" /f
+reg delete "HKCR\Microsoft.Website\ShellEx\ContextMenuHandlers\PintoStartScreen" /f
+reg delete "HKCR\mscfile\shellex\ContextMenuHandlers\PintoStartScreen" /f
