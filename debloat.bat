@@ -160,3 +160,11 @@ reg delete "HKCR\Folder\shellex\ContextMenuHandlers\PintoStartScreen" /f
 reg delete "HKCR\exefile\shellex\ContextMenuHandlers\PintoStartScreen" /f
 reg delete "HKCR\Microsoft.Website\ShellEx\ContextMenuHandlers\PintoStartScreen" /f
 reg delete "HKCR\mscfile\shellex\ContextMenuHandlers\PintoStartScreen" /f
+
+
+::
+:: Remove 'Open in new window' from context menu
+::
+:: You CANNOT do reg delete "HKCR\Folder\shell\opennewwindow" /f
+:: https://superuser.com/a/1507509
+reg add "HKCR\Folder\shell\opennewwindow" /v ProgrammaticAccessOnly /t REG_SZ
