@@ -168,3 +168,10 @@ reg delete "HKCR\mscfile\shellex\ContextMenuHandlers\PintoStartScreen" /f
 :: You CANNOT do reg delete "HKCR\Folder\shell\opennewwindow" /f
 :: https://superuser.com/a/1507509
 reg add "HKCR\Folder\shell\opennewwindow" /v ProgrammaticAccessOnly /t REG_SZ
+
+
+::
+:: Remove 'Open in Visual Studio' from context menu
+:: 
+reg delete "HKCR\Directory\Background\shell\AnyCode" /f
+reg delete "HKCR\Directory\shell\AnyCode" /f
