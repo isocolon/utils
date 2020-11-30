@@ -175,3 +175,9 @@ reg add "HKCR\Folder\shell\opennewwindow" /v ProgrammaticAccessOnly /t REG_SZ
 :: 
 reg delete "HKCR\Directory\Background\shell\AnyCode" /f
 reg delete "HKCR\Directory\shell\AnyCode" /f
+
+
+::
+:: Disable 'Show Windows welcome experience'
+::
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v SubscribedContent-310093Enabled /t REG_DWORD /d 0 /f
