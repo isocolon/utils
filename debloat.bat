@@ -181,3 +181,9 @@ reg delete "HKCR\Directory\shell\AnyCode" /f
 :: Disable 'Show Windows welcome experience'
 ::
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v SubscribedContent-310093Enabled /t REG_DWORD /d 0 /f
+
+
+::
+:: Disable 'Suggest ways I can finish setting up my device'
+::
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\UserProfileEngagement" /v ScoobeSystemSettingEnabled /t REG_DWORD /d 0 /f
