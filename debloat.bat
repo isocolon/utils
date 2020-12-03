@@ -193,3 +193,10 @@ reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\UserProfileEngagement" /
 :: Disable 'Get tips, tricks, and suggestions'
 ::
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v SubscribedContent-338389Enabled /t REG_DWORD /d 0 /f
+
+
+::
+:: Restart Explorer to force changes
+::
+taskkill /f /im "explorer.exe"
+explorer.exe
