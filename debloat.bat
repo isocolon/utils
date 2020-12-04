@@ -196,6 +196,23 @@ reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" 
 
 
 ::
+:: Stop and remove xbox services
+::
+sc config XblAuthManager start= disabled
+sc stop XblAuthManager      :: Xbox Live Auth Manager
+
+sc config XblGameSave start= disabled
+sc stop XblGameSave         :: Xbox Live Game Save
+
+sc config XboxGipSvc start= disabled
+sc stop XboxGipSvc          :: Xbox Accessory Management Service
+
+sc config XboxNetApiSvc start= disabled
+sc stop XboxNetApiSvc       :: Xbox Live Networking Service
+
+
+
+::
 :: Restart Explorer to force changes
 ::
 taskkill /f /im "explorer.exe"
