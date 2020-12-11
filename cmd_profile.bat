@@ -7,3 +7,4 @@ set SUBLIME="%ProgramFiles%\Sublime Text 3\sublime_text.exe"
 set SYS32="\Windows\System32"
 
 doskey dt=cd /D "%USERPROFILE%\Desktop"
+doskey dl=cd /D "%USERPROFILE%\Downloads"
