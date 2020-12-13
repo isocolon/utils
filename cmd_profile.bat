@@ -9,3 +9,4 @@ set SYS32="\Windows\System32"
 doskey dt=cd /D "%USERPROFILE%\Desktop"
 doskey dl=cd /D "%USERPROFILE%\Downloads"
 doskey man=help $*
+doskey mv=move $*
