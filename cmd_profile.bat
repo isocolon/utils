@@ -13,3 +13,4 @@ doskey mv=move $*
 doskey take=mkdir $* $T$T cd $*
 doskey history=doskey /history
 doskey traceroute=tracert $*
+doskey st=%SUBLIME% $*
