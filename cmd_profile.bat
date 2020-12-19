@@ -15,3 +15,4 @@ doskey history=doskey /history
 doskey traceroute=tracert $*
 doskey st=%SUBLIME% $*
 doskey ise=powershell_ise.exe $*
+doskey alias=!st! %ALIASFILE%
