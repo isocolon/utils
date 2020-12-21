@@ -17,3 +17,5 @@ doskey st=%SUBLIME% $*
 doskey ise=powershell_ise.exe $*
 doskey alias=!st! %ALIASFILE%
 doskey aliases=type %ALIASFILE%
+
+net session >nul 2>&1
