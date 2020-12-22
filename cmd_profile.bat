@@ -19,3 +19,4 @@ doskey alias=!st! %ALIASFILE%
 doskey aliases=type %ALIASFILE%
 
 net session >nul 2>&1
+if %errorLevel% == 0 (
