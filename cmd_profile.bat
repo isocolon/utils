@@ -20,3 +20,4 @@ doskey aliases=type %ALIASFILE%
 
 net session >nul 2>&1
 if %errorLevel% == 0 (
+    title ADMIN
