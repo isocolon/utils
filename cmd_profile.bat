@@ -23,3 +23,4 @@ if %errorLevel% == 0 (
     title ADMIN
 ) else (
     title USER
+)
